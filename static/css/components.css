@@ -2302,7 +2302,7 @@ body {
 .twg-login-hero {
   position: relative;
   min-height: calc(100vh - 160px);
-  background: url("/static/img/team.png") center center / cover no-repeat;
+  background: url("../img/team.png") center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
