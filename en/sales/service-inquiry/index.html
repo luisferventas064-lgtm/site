@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Service Inquiry | TWG</title>
+<link href="/static/img/twg-logo.png" rel="icon" type="image/png"/>
+<link href="/static/css/theme.css" rel="stylesheet"/>
+<link href="/static/css/components.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="twg-navbar">
+<div class="twg-navbar__left">
+<button class="twg-lang-trigger twg-btn-fixed" type="button">
+<span class="twg-btn-fixed__label">EN</span>
+<span class="twg-profile-caret">⌄</span>
+</button>
+<div class="twg-lang-dropdown">
+<div aria-label="Language options" class="twg-lang-options" role="menu">
+<a aria-current="true" class="twg-lang-option is-active" href="/en/sales/service-inquiry/">EN</a>
+<a class="twg-lang-option" href="/fr/sales/service-inquiry/">FR</a>
+</div>
+</div>
+</div>
+<div class="twg-navbar__center">
+<a class="twg-brand" href="/en/">
+<img alt="The Warranty Group" class="twg-brand__logo" src="/static/img/twg-logo.png"/>
+<span class="twg-brand__name">The Warranty Group</span>
+</a>
+</div>
+<div class="twg-navbar__right">
+<nav class="twg-nav-links">
+<a href="/en/">Home</a>
+<a href="/en/service-plan/">Service Plan</a>
+<a href="/en/login/">Login</a>
+</nav>
+</div>
+</header>
+<main class="main-content">
+<section class="twg-inquiry-page">
+<div class="twg-container">
+<div class="twg-inquiry-header">
+<h1>Request Plan Information</h1>
+<p class="twg-inquiry-subtitle">
+        Fill out the form below and our team will contact you with details about the plan you're interested in.
+      </p>
+</div>
+<div class="twg-inquiry-form-wrapper">
+<form action="#" class="twg-inquiry-form" data-static-disabled="true" method="get">
+
+<div class="twg-form-group">
+<label class="twg-form-label" for="id_customer_name">Full Name</label>
+<input class="twg-form-input" id="id_customer_name" maxlength="150" name="customer_name" placeholder="Full Name" required="" type="text"/>
+</div>
+<div class="twg-form-group">
+<label class="twg-form-label" for="id_customer_email">Email Address</label>
+<input class="twg-form-input" id="id_customer_email" maxlength="254" name="customer_email" placeholder="Email Address" required="" type="email"/>
+</div>
+<div class="twg-form-group">
+<label class="twg-form-label" for="id_customer_phone">Phone Number</label>
+<input class="twg-form-input" id="id_customer_phone" maxlength="50" name="customer_phone" placeholder="Phone Number" required="" type="text"/>
+</div>
+<div class="twg-form-group">
+<label class="twg-form-label" for="id_customer_postal_code">Postal Code</label>
+<input class="twg-form-input" id="id_customer_postal_code" maxlength="20" name="customer_postal_code" placeholder="Postal Code (optional)" type="text"/>
+</div>
+<div class="twg-form-group">
+<label class="twg-form-label" for="id_message">Message</label>
+<textarea class="twg-form-textarea" cols="40" id="id_message" name="message" placeholder="Additional message (optional)" rows="5">
+</textarea>
+</div>
+<div aria-hidden="true" class="twg-honeypot-wrap">
+<label for="id_website_url">Leave this field empty</label>
+<input aria-hidden="true" autocomplete="off" class="twg-honeypot" id="id_website_url" name="website_url" tabindex="-1" type="text"/>
+</div>
+<div class="twg-form-actions">
+<button class="twg-global-cta__btn twg-global-cta__btn--primary" type="submit">
+            Send Request
+          </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<style>
+  /* Honeypot: visually hidden but NOT display:none so basic bots don't skip it */
+  .twg-honeypot-wrap {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .twg-inquiry-page {
+    padding: 60px 20px;
+  }
+
+  .twg-inquiry-header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .twg-inquiry-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .twg-inquiry-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-color-secondary, #666);
+  }
+
+  .twg-inquiry-context {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .twg-inquiry-context-item {
+    background: var(--background-color-light, #f5f5f5);
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+
+  .twg-inquiry-form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .twg-inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .twg-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .twg-form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+  }
+
+  .twg-form-input,
+  .twg-form-textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .twg-form-input:focus,
+  .twg-form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color, #0066cc);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  }
+
+  .twg-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .twg-form-errors {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+  }
+
+  .twg-form-errors ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .twg-form-actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .twg-form-actions button {
+    padding: 12px 40px;
+  }
+</style>
+</main>
+<footer class="twg-footer">
+<div class="twg-footer__top">
+<div class="twg-footer__brand">
+<img alt="The Warranty Group" src="/static/img/twg-logo.png"/>
+<p>
+        Professional vehicle protection solutions designed for reliability, transparency, and long-term coverage across Canada.
+      </p>
+</div>
+<div class="twg-footer__grid">
+<div>
+<h4>Company</h4>
+<a href="/en/">Home</a>
+<a href="/en/service-plan/">Service Plan</a>
+</div>
+<div>
+<h4>Support</h4>
+<a href="/en/claims/">Claims</a>
+<a href="/en/contact/">Customer Support</a>
+<a href="/en/contact/">Contact</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/en/terms/">Terms &amp; Conditions</a>
+<a href="/en/privacy/">Privacy Policy</a>
+<a href="/en/disclaimer/">Disclaimer</a>
+</div>
+<div>
+<h4>Access</h4>
+<a href="/en/login/">Login</a>
+</div>
+</div>
+</div>
+<div class="twg-footer__bottom">
+<div class="twg-footer__legal">
+      © 2026 The Warranty Group. All rights reserved.
+    </div>
+<div class="twg-footer__contact">
+<span>647-525-9802</span>
+<span>claims@thewarrantygroup.ca</span>
+</div>
+</div>
+</footer>
+<!-- Cookie consent banner -->
+<div aria-live="polite" class="twg-cookie-banner" id="cookie-banner" role="alert">
+<div class="twg-cookie-content">
+<span>We use cookies to improve your experience. By continuing, you accept our use of cookies.</span>
+<button class="twg-cookie-btn" id="accept-cookies">Accept</button>
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var banner = document.getElementById("cookie-banner");
+      var btn = document.getElementById("accept-cookies");
+      if (!localStorage.getItem("cookies_accepted")) {
+        banner.style.display = "block";
+      }
+      btn.addEventListener("click", function () {
+        localStorage.setItem("cookies_accepted", "true");
+        banner.style.display = "none";
+      });
+    });
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const hasPagination = Array.from(params.keys()).some(function (key) {
+        return key.includes("page");
+      });
+
+      if (!hasPagination) {
+        return;
+      }
+
+      const hashId = window.location.hash ? window.location.hash.slice(1) : "table-section";
+      const el = document.getElementById(hashId) || document.getElementById("table-section");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("form[data-static-disabled='true']").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+    });
+    form.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" && event.target && event.target.tagName !== "TEXTAREA") {
+        event.preventDefault();
+      }
+    });
+  });
+});
+</script></body>
+</html>

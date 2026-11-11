@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Claims Process | TWG</title>
+<link href="/static/img/twg-logo.png" rel="icon" type="image/png"/>
+<link href="/static/css/theme.css" rel="stylesheet"/>
+<link href="/static/css/components.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="twg-navbar">
+<div class="twg-navbar__left">
+<button class="twg-lang-trigger twg-btn-fixed" type="button">
+<span class="twg-btn-fixed__label">EN</span>
+<span class="twg-profile-caret">⌄</span>
+</button>
+<div class="twg-lang-dropdown">
+<div aria-label="Language options" class="twg-lang-options" role="menu">
+<a aria-current="true" class="twg-lang-option is-active" href="/en/claims/">EN</a>
+<a class="twg-lang-option" href="/fr/claims/">FR</a>
+</div>
+</div>
+</div>
+<div class="twg-navbar__center">
+<a class="twg-brand" href="/en/">
+<img alt="The Warranty Group" class="twg-brand__logo" src="/static/img/twg-logo.png"/>
+<span class="twg-brand__name">The Warranty Group</span>
+</a>
+</div>
+<div class="twg-navbar__right">
+<nav class="twg-nav-links">
+<a href="/en/">Home</a>
+<a href="/en/service-plan/">Service Plan</a>
+<a href="/en/login/">Login</a>
+</nav>
+</div>
+</header>
+<main class="main-content">
+<section class="twg-claims">
+<div class="twg-container">
+<h1>Claims Process</h1>
+<p class="twg-claims-subtitle">
+      Simple, fast, and transparent - we guide you through every step.
+    </p>
+<div class="twg-claims-steps">
+<div class="twg-claims-step">
+<span>1</span>
+<h3>Report the Issue</h3>
+<p>Contact our support team immediately when a problem occurs.</p>
+</div>
+<div class="twg-claims-step">
+<span>2</span>
+<h3>Diagnosis</h3>
+<p>An authorized repair facility will inspect the vehicle and submit an estimate.</p>
+</div>
+<div class="twg-claims-step">
+<span>3</span>
+<h3>Approval</h3>
+<p>We review the claim and approve eligible repairs based on your coverage.</p>
+</div>
+<div class="twg-claims-step">
+<span>4</span>
+<h3>Repair</h3>
+<p>Repairs are completed by authorized service providers.</p>
+</div>
+</div>
+<div class="twg-claims-warning">
+<h3>Important</h3>
+<ul>
+<li>No repair work may begin without prior authorization.</li>
+<li>Coverage depends on your active contract and plan details.</li>
+<li>Pre-existing conditions are not covered.</li>
+</ul>
+</div>
+<div class="twg-claims-contact">
+<div style="max-width: 620px; margin: 0 auto 18px; padding: 24px; background: #fff; border: 1px solid #e2e6ea; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); text-align: left;">
+<h3 style="margin-top:0; color:#0d3b66;">Verify your vehicle eligibility before starting a claim</h3>
+<p style="margin-bottom:16px; color:#475569;">
+          Before starting a claim, please enter the vehicle VIN so we can confirm it exists in our system.
+        </p>
+<form action="#" data-static-disabled="true" method="get" style="display:grid; gap:12px;">
+
+<label for="vin" style="font-weight:600; color:#0f172a;">Enter your VIN</label>
+<input autocomplete="off" id="vin" maxlength="17" name="vin" placeholder="Enter your VIN" spellcheck="false" style="width:100%; padding:12px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:15px; text-transform:uppercase; box-sizing:border-box;" type="text" value=""/>
+<button style="display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 32px; border:none; border-radius:8px; font-size:16px; font-weight:700; background:#0d3b66; color:#fff; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.1);" type="submit">
+            Continue
+          </button>
+</form>
+</div>
+<p>Need help with your claim? Contact us directly.</p>
+<div class="twg-claims-contact-box">
+<span>647-525-9802</span>
+<span>claims@thewarrantygroup.ca</span>
+</div>
+</div>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const vinInput = document.getElementById("vin");
+  if (vinInput) {
+    vinInput.addEventListener("input", function () {
+      this.value = this.value.toUpperCase().replace(/[\s-]/g, "").replace(/[IOQ]/g, "");
+    });
+  }
+});
+</script>
+</main>
+<footer class="twg-footer">
+<div class="twg-footer__top">
+<div class="twg-footer__brand">
+<img alt="The Warranty Group" src="/static/img/twg-logo.png"/>
+<p>
+        Professional vehicle protection solutions designed for reliability, transparency, and long-term coverage across Canada.
+      </p>
+</div>
+<div class="twg-footer__grid">
+<div>
+<h4>Company</h4>
+<a href="/en/">Home</a>
+<a href="/en/service-plan/">Service Plan</a>
+</div>
+<div>
+<h4>Support</h4>
+<a href="/en/claims/">Claims</a>
+<a href="/en/contact/">Customer Support</a>
+<a href="/en/contact/">Contact</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/en/terms/">Terms &amp; Conditions</a>
+<a href="/en/privacy/">Privacy Policy</a>
+<a href="/en/disclaimer/">Disclaimer</a>
+</div>
+<div>
+<h4>Access</h4>
+<a href="/en/login/">Login</a>
+</div>
+</div>
+</div>
+<div class="twg-footer__bottom">
+<div class="twg-footer__legal">
+      © 2026 The Warranty Group. All rights reserved.
+    </div>
+<div class="twg-footer__contact">
+<span>647-525-9802</span>
+<span>claims@thewarrantygroup.ca</span>
+</div>
+</div>
+</footer>
+<!-- Cookie consent banner -->
+<div aria-live="polite" class="twg-cookie-banner" id="cookie-banner" role="alert">
+<div class="twg-cookie-content">
+<span>We use cookies to improve your experience. By continuing, you accept our use of cookies.</span>
+<button class="twg-cookie-btn" id="accept-cookies">Accept</button>
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var banner = document.getElementById("cookie-banner");
+      var btn = document.getElementById("accept-cookies");
+      if (!localStorage.getItem("cookies_accepted")) {
+        banner.style.display = "block";
+      }
+      btn.addEventListener("click", function () {
+        localStorage.setItem("cookies_accepted", "true");
+        banner.style.display = "none";
+      });
+    });
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const hasPagination = Array.from(params.keys()).some(function (key) {
+        return key.includes("page");
+      });
+
+      if (!hasPagination) {
+        return;
+      }
+
+      const hashId = window.location.hash ? window.location.hash.slice(1) : "table-section";
+      const el = document.getElementById(hashId) || document.getElementById("table-section");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("form[data-static-disabled='true']").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+    });
+    form.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" && event.target && event.target.tagName !== "TEXTAREA") {
+        event.preventDefault();
+      }
+    });
+  });
+});
+</script></body>
+</html>

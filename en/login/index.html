@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Sign In — TWG</title>
+<link href="/static/img/twg-logo.png" rel="icon" type="image/png"/>
+<link href="/static/css/theme.css" rel="stylesheet"/>
+<link href="/static/css/components.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="twg-navbar">
+<div class="twg-navbar__left">
+<button class="twg-lang-trigger twg-btn-fixed" type="button">
+<span class="twg-btn-fixed__label">EN</span>
+<span class="twg-profile-caret">⌄</span>
+</button>
+<div class="twg-lang-dropdown">
+<div aria-label="Language options" class="twg-lang-options" role="menu">
+<a aria-current="true" class="twg-lang-option is-active" href="/en/login/">EN</a>
+<a class="twg-lang-option" href="/fr/login/">FR</a>
+</div>
+</div>
+</div>
+<div class="twg-navbar__center">
+<a class="twg-brand" href="/en/">
+<img alt="The Warranty Group" class="twg-brand__logo" src="/static/img/twg-logo.png"/>
+<span class="twg-brand__name">The Warranty Group</span>
+</a>
+</div>
+<div class="twg-navbar__right">
+<nav class="twg-nav-links">
+<a href="/en/">Home</a>
+<a href="/en/service-plan/">Service Plan</a>
+<a href="/en/login/">Login</a>
+</nav>
+</div>
+</header>
+<main class="main-content">
+<section class="twg-login-hero">
+<div class="twg-login-overlay"></div>
+<div class="twg-login-shell">
+<div class="twg-login-card">
+<div class="twg-login-brand">
+<img alt="TWG Logo" class="twg-login-logo" src="/static/img/twg-logo.png"/>
+<h1>The Warranty Group</h1>
+<p>Secure access to your account</p>
+</div>
+<form action="#" class="twg-login-form" data-static-disabled="true" method="get">
+
+<div class="twg-field">
+<label for="id_username">Username</label>
+<input autocomplete="username" id="id_username" name="username" required="" type="text" value=""/>
+</div>
+<div class="twg-field">
+<label for="id_password">Password</label>
+<input autocomplete="current-password" id="id_password" name="password" required="" type="password"/>
+</div>
+<div class="twg-login-meta">
+<a class="twg-login-link" data-static-disabled-link="true" href="#">Forgot password?</a>
+</div>
+<button class="twg-login-btn" type="submit">Sign In</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="twg-footer">
+<div class="twg-footer__top">
+<div class="twg-footer__brand">
+<img alt="The Warranty Group" src="/static/img/twg-logo.png"/>
+<p>
+        Professional vehicle protection solutions designed for reliability, transparency, and long-term coverage across Canada.
+      </p>
+</div>
+<div class="twg-footer__grid">
+<div>
+<h4>Company</h4>
+<a href="/en/">Home</a>
+<a href="/en/service-plan/">Service Plan</a>
+</div>
+<div>
+<h4>Support</h4>
+<a href="/en/claims/">Claims</a>
+<a href="/en/contact/">Customer Support</a>
+<a href="/en/contact/">Contact</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/en/terms/">Terms &amp; Conditions</a>
+<a href="/en/privacy/">Privacy Policy</a>
+<a href="/en/disclaimer/">Disclaimer</a>
+</div>
+<div>
+<h4>Access</h4>
+<a href="/en/login/">Login</a>
+</div>
+</div>
+</div>
+<div class="twg-footer__bottom">
+<div class="twg-footer__legal">
+      © 2026 The Warranty Group. All rights reserved.
+    </div>
+<div class="twg-footer__contact">
+<span>647-525-9802</span>
+<span>claims@thewarrantygroup.ca</span>
+</div>
+</div>
+</footer>
+<!-- Cookie consent banner -->
+<div aria-live="polite" class="twg-cookie-banner" id="cookie-banner" role="alert">
+<div class="twg-cookie-content">
+<span>We use cookies to improve your experience. By continuing, you accept our use of cookies.</span>
+<button class="twg-cookie-btn" id="accept-cookies">Accept</button>
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var banner = document.getElementById("cookie-banner");
+      var btn = document.getElementById("accept-cookies");
+      if (!localStorage.getItem("cookies_accepted")) {
+        banner.style.display = "block";
+      }
+      btn.addEventListener("click", function () {
+        localStorage.setItem("cookies_accepted", "true");
+        banner.style.display = "none";
+      });
+    });
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const hasPagination = Array.from(params.keys()).some(function (key) {
+        return key.includes("page");
+      });
+
+      if (!hasPagination) {
+        return;
+      }
+
+      const hashId = window.location.hash ? window.location.hash.slice(1) : "table-section";
+      const el = document.getElementById(hashId) || document.getElementById("table-section");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("form[data-static-disabled='true']").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+    });
+    form.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" && event.target && event.target.tagName !== "TEXTAREA") {
+        event.preventDefault();
+      }
+    });
+  });
+});
+</script></body>
+</html>

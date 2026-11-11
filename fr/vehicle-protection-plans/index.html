@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Warranty Group | Vehicle Protection Plans</title>
+<style>
+    :root {
+      --navy: #0b1f3a;
+      --blue: #123d73;
+      --silver: #c7ced9;
+      --silver-soft: #eef3f8;
+      --white: #ffffff;
+      --ink: #233348;
+      --muted: #607086;
+      --card-shadow: 0 18px 36px rgba(17, 34, 58, 0.08);
+      --panel-shadow: 0 24px 50px rgba(17, 34, 58, 0.10);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: #edf2f7;
+      color: var(--ink);
+      font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      padding: 0;
+    }
+
+    .wrapper {
+      width: 1600px;
+      min-height: 900px;
+      margin: 0 auto;
+      padding: 12px 20px 10px;
+      box-sizing: border-box;
+      background: var(--white);
+      border: 1px solid #dbe3ec;
+      border-radius: 36px;
+      box-shadow: var(--panel-shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .wrapper::before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      right: -90px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: #f3f6fa;
+    }
+
+    .wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 210px;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(199, 206, 217, 0), rgba(199, 206, 217, 0.55), rgba(199, 206, 217, 0));
+      opacity: 0.55;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 100%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 2px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .brand-badge {
+      width: 88px;
+      height: 88px;
+      border-radius: 24px;
+      background: #f7f9fc;
+      border: 1px solid #d7e0ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 14px 30px rgba(17, 34, 58, 0.06);
+    }
+
+    .brand-badge img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .brand-meta small {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 12px;
+      letter-spacing: 0.42em;
+      color: #7f8ea1;
+    }
+
+    .brand-meta h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      padding-top: 0;
+    }
+
+    .hero-copy h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 46px;
+      line-height: 1;
+      color: var(--navy);
+      max-width: 760px;
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 720px;
+      font-size: 16px;
+      line-height: 1.3;
+      color: var(--muted);
+    }
+
+    .hero-image {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: linear-gradient(180deg, #f7f9fc 0%, #eef3f8 100%);
+      border: 1px solid #d6e0ea;
+      box-shadow: var(--card-shadow);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 14%;
+      display: block;
+    }
+
+    .hero-image::before {
+      content: none;
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.8);
+      pointer-events: none;
+    }
+
+    .section-lead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 4px;
+    }
+
+    .section-lead h3 {
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: 0.22em;
+      color: var(--navy);
+    }
+
+    .section-lead p {
+      margin: 0;
+      max-width: 520px;
+      text-align: right;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid #d8e1eb;
+      border-radius: 28px;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-media {
+      position: relative;
+      height: 104px;
+      background: #edf2f7;
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(11, 31, 58, 0.03), rgba(11, 31, 58, 0.20));
+    }
+
+    .card-tag {
+      position: absolute;
+      left: 12px;
+      bottom: 10px;
+      z-index: 1;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+
+    .card-body {
+      padding: 12px 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-body h4 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      line-height: 1.05;
+      color: var(--navy);
+    }
+
+    .card-body p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.35;
+      color: var(--muted);
+      min-height: 26px;
+    }
+
+    .highlights {
+      display: grid;
+      gap: 6px;
+    }
+
+    .highlight {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      background: var(--silver-soft);
+      border: 1px solid #dbe4ed;
+      border-radius: var(--radius-md);
+    }
+
+    .highlight::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      flex: 0 0 9px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 0 5px rgba(18, 61, 115, 0.08);
+    }
+
+    .highlight span {
+      display: block;
+      font-size: 11px;
+      line-height: 1.25;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: auto;
+      padding-top: 6px;
+      border-top: 1px solid #dbe3ec;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .footer-brand img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .footer-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+<div class="page">
+<header class="header">
+<div class="brand">
+<div class="brand-badge">
+<img alt="The Warranty Group logo" src="../../static/img/twg-logo.png"/>
+</div>
+<div class="brand-meta">
+<small>THE WARRANTY GROUP</small>
+<h1>TWG</h1>
+</div>
+</div>
+</header>
+<section class="hero">
+<div class="hero-copy">
+<h2>Vehicle Protection Plans</h2>
+<p>Comprehensive coverage solutions for Auto, EV, and Heavy vehicles.</p>
+</div>
+<div class="hero-image">
+<img alt="The Warranty Group team presentation" src="../../static/img/team.png"/>
+</div>
+</section>
+<section class="section-lead">
+<h3>PROTECTION SUITE</h3>
+<p>Three focused categories with concise descriptions and clean coverage highlights for a clear general presentation.</p>
+</section>
+<section class="cards">
+<article class="card">
+<div class="card-media">
+<img alt="Auto service vehicle" src="../../static/img/auto1.png"/>
+<div class="card-tag">AUTO SERVICE</div>
+</div>
+<div class="card-body">
+<h4>Auto Service</h4>
+<p>Comprehensive protection solutions designed for modern gasoline and hybrid vehicles.</p>
+<div class="highlights">
+<div class="highlight"><span>Engine &amp; Transmission Protection</span></div>
+<div class="highlight"><span>Electrical &amp; Mechanical Coverage</span></div>
+<div class="highlight"><span>Cooling Systems &amp; Climate Control</span></div>
+<div class="highlight"><span>Suspension &amp; Steering Components</span></div>
+</div>
+</div>
+</article>
+<article class="card">
+<div class="card-media">
+<img alt="Electric vehicle presentation" src="../../static/img/testla1.jpeg"/>
+<div class="card-tag">EV SERVICE</div>
+</div>
+<div class="card-body">
+<h4>EV Service</h4>
+<p>Advanced protection solutions tailored for modern electric vehicle systems and components.</p>
+<div class="highlights">
+<div class="highlight"><span>High Voltage Component Protection</span></div>
+<div class="highlight"><span>Battery &amp; Drive System Coverage</span></div>
+<div class="highlight"><span>Charging System Support</span></div>
+<div class="highlight"><span>Thermal &amp; Climate Management</span></div>
+</div>
+</div>
+</article>
+<article class="card">
+<div class="card-media">
+<img alt="Heavy service truck coverage" src="../../static/img/heavyseo.png"/>
+<div class="card-tag">HEAVY SERVICE</div>
+</div>
+<div class="card-body">
+<h4>Heavy Service</h4>
+<p>Protection solutions built for demanding commercial and heavy-duty vehicle operations.</p>
+<div class="highlights">
+<div class="highlight"><span>Engine &amp; Drivetrain Protection</span></div>
+<div class="highlight"><span>Commercial Component Coverage</span></div>
+<div class="highlight"><span>Brake, Steering &amp; Suspension Systems</span></div>
+<div class="highlight"><span>Cooling &amp; Operational Reliability</span></div>
+</div>
+</div>
+</article>
+</section>
+<footer class="footer">
+<div class="footer-brand">
+<img alt="The Warranty Group mark" src="../../static/img/twg-logo.png"/>
+<span>The Warranty Group</span>
+</div>
+<div class="footer-meta">
+<span>647-525-9802</span>
+<span>www.thewarrantygroup.ca</span>
+<span>admin@thewarrantygroup.ca</span>
+</div>
+</footer>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("form[data-static-disabled='true']").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+    });
+    form.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" && event.target && event.target.tagName !== "TEXTAREA") {
+        event.preventDefault();
+      }
+    });
+  });
+});
+</script></body>
+</html>

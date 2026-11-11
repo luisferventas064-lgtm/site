@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Contact | TWG</title>
+<link href="/static/img/twg-logo.png" rel="icon" type="image/png"/>
+<link href="/static/css/theme.css" rel="stylesheet"/>
+<link href="/static/css/components.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="twg-navbar">
+<div class="twg-navbar__left">
+<button class="twg-lang-trigger twg-btn-fixed" type="button">
+<span class="twg-btn-fixed__label">EN</span>
+<span class="twg-profile-caret">⌄</span>
+</button>
+<div class="twg-lang-dropdown">
+<div aria-label="Language options" class="twg-lang-options" role="menu">
+<a aria-current="true" class="twg-lang-option is-active" href="/en/contact/">EN</a>
+<a class="twg-lang-option" href="/fr/contact/">FR</a>
+</div>
+</div>
+</div>
+<div class="twg-navbar__center">
+<a class="twg-brand" href="/en/">
+<img alt="The Warranty Group" class="twg-brand__logo" src="/static/img/twg-logo.png"/>
+<span class="twg-brand__name">The Warranty Group</span>
+</a>
+</div>
+<div class="twg-navbar__right">
+<nav class="twg-nav-links">
+<a href="/en/">Home</a>
+<a href="/en/service-plan/">Service Plan</a>
+<a href="/en/login/">Login</a>
+</nav>
+</div>
+</header>
+<main class="main-content">
+<section class="twg-contact">
+<div class="twg-container">
+<div class="twg-contact__header">
+<h1>Contact Us</h1>
+<p class="twg-contact__subtitle">
+        Our team is here to help with service plans, claims support, and general inquiries.
+      </p>
+</div>
+<div class="twg-contact__grid">
+<div class="twg-contact__card">
+<h3>General Support</h3>
+<p>For general questions about our service plans and coverage options.</p>
+<div class="twg-contact__info">
+<span>647-525-9802</span>
+<span>admin@thewarrantygroup.ca</span>
+</div>
+</div>
+<div class="twg-contact__card">
+<h3>Claims Department</h3>
+<p>For active claims, pre-authorization, and repair process assistance.</p>
+<div class="twg-contact__info">
+<span>647-525-9802</span>
+<span>claims@thewarrantygroup.ca</span>
+</div>
+</div>
+<div class="twg-contact__card">
+<h3>Office</h3>
+<p>Business correspondence and administrative contact information.</p>
+<div class="twg-contact__info">
+<span>295 The West Mall</span>
+<span>Etobicoke, ON M9C 4Z4</span>
+<span>Canada</span>
+</div>
+</div>
+</div>
+<div class="twg-contact__note">
+<h3>Important</h3>
+<p>
+        For claim-related matters, please contact us before authorizing any repairs. Coverage and approvals remain subject to the terms and conditions of the active service contract.
+      </p>
+</div>
+<section class="twg-global-cta">
+<h2>Need help or have questions?</h2>
+<p>Our team is ready to assist you.</p>
+<div class="twg-global-cta__buttons">
+<a class="twg-global-cta__btn twg-global-cta__btn--primary" href="tel:647-525-9802">
+      Call Now
+    </a>
+<a class="twg-global-cta__btn twg-global-cta__btn--secondary" href="mailto:info@thewarrantygroup.ca?subject=Service%20Plan%20Inquiry%20-%20TWG&amp;body=Hello%20TWG%20team%2C%0A%0AI%20am%20interested%20in%20your%20services%20and%20would%20like%20more%20information.%0A%0AMy%20name%3A%0AMy%20phone%20number%3A%0AMy%20email%3A%0AMy%20message%3A%0A%0AThank%20you.">
+      Send Message
+    </a>
+</div>
+</section>
+</div>
+</section>
+</main>
+<footer class="twg-footer">
+<div class="twg-footer__top">
+<div class="twg-footer__brand">
+<img alt="The Warranty Group" src="/static/img/twg-logo.png"/>
+<p>
+        Professional vehicle protection solutions designed for reliability, transparency, and long-term coverage across Canada.
+      </p>
+</div>
+<div class="twg-footer__grid">
+<div>
+<h4>Company</h4>
+<a href="/en/">Home</a>
+<a href="/en/service-plan/">Service Plan</a>
+</div>
+<div>
+<h4>Support</h4>
+<a href="/en/claims/">Claims</a>
+<a href="/en/contact/">Customer Support</a>
+<a href="/en/contact/">Contact</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/en/terms/">Terms &amp; Conditions</a>
+<a href="/en/privacy/">Privacy Policy</a>
+<a href="/en/disclaimer/">Disclaimer</a>
+</div>
+<div>
+<h4>Access</h4>
+<a href="/en/login/">Login</a>
+</div>
+</div>
+</div>
+<div class="twg-footer__bottom">
+<div class="twg-footer__legal">
+      © 2026 The Warranty Group. All rights reserved.
+    </div>
+<div class="twg-footer__contact">
+<span>647-525-9802</span>
+<span>claims@thewarrantygroup.ca</span>
+</div>
+</div>
+</footer>
+<!-- Cookie consent banner -->
+<div aria-live="polite" class="twg-cookie-banner" id="cookie-banner" role="alert">
+<div class="twg-cookie-content">
+<span>We use cookies to improve your experience. By continuing, you accept our use of cookies.</span>
+<button class="twg-cookie-btn" id="accept-cookies">Accept</button>
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var banner = document.getElementById("cookie-banner");
+      var btn = document.getElementById("accept-cookies");
+      if (!localStorage.getItem("cookies_accepted")) {
+        banner.style.display = "block";
+      }
+      btn.addEventListener("click", function () {
+        localStorage.setItem("cookies_accepted", "true");
+        banner.style.display = "none";
+      });
+    });
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const hasPagination = Array.from(params.keys()).some(function (key) {
+        return key.includes("page");
+      });
+
+      if (!hasPagination) {
+        return;
+      }
+
+      const hashId = window.location.hash ? window.location.hash.slice(1) : "table-section";
+      const el = document.getElementById(hashId) || document.getElementById("table-section");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("form[data-static-disabled='true']").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+    });
+    form.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" && event.target && event.target.tagName !== "TEXTAREA") {
+        event.preventDefault();
+      }
+    });
+  });
+});
+</script></body>
+</html>
